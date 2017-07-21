@@ -10,14 +10,36 @@
     <packaging>war</packaging>
     <name>advids-webapp Maven Webapp</name>
     <url>http://maven.apache.org</url>
+
+    <!--定义jar保所依赖的版本-->
+    <properties>
+        <spring.version>4.2.1.RELEASE</spring.version>
+        <junit.version>4.12</junit.version>
+    </properties>
+
+
     <dependencies>
+
+        <!--spring核心包开始-->
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+
+
+        <!-- https://mvnrepository.com/artifact/junit/junit -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>3.8.1</version>
+            <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+
     <build>
         <finalName>advids-webapp</finalName>
 
