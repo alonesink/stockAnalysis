@@ -1,0 +1,1 @@
+1.js中,number,string,boolean,null,undefined,Object六种类型，在进行if判空时，其中Number类型的0，boolean类型的false，null，undefined，string类型的"",if语句都不成立。
