@@ -1,1 +1,22 @@
 1.js中,number,string,boolean,null,undefined,Object六种类型，在进行if判空时，其中Number类型的0，boolean类型的false，null，undefined，string类型的"",if语句都不成立。
+启动tomcat服务
+方式一：直接启动 ./startup.sh
+方式二：作为服务启动 nohup ./startup.sh &
+方式三：控制台动态输出方式启动 ./catalina.sh run 动态地显示tomcat后台的控制台输出信息,Ctrl+C后退出并关闭服务
+解释：
+通过方式一、方式三启动的tomcat有个弊端，当客户端连接断开的时候，tomcat服务也会立即停止，通过方式二可以作为linux服务一直运行
+通过方式一、方式二方式启动的tomcat，其日志会写到相应的日志文件中，而不能动态地查看tomcat控制台的输出信息与错误情况，通过方式三可以以控制台模式启动tomcat服务，
+直接看到程序运行时后台的控制台输出信息，不必每次都要很麻烦的打开catalina.out日志文件进行查看，这样便于跟踪查阅后台输出信息。tomcat控制台信息包括log4j和System.out.println()等输出的信息。
+
+
+system.getproperty方法可以根据key获取哪些值？
+
+user.name ->获取当前系统登录用户名
+file.encoding -> 获取当前文件的编码（UTF-8）
+
+java中定义数组的三种方式：
+String [] str = new String[5];然后str[0],str[1]分别一一赋值
+String [] str = new String[]{"str1","str2","str3","str4"}在定义中就直接初始化（实际中用到的比较多）
+String [] str = {"str1","str2","str3","str4"}开始的时候就定义好
+
+css引入优先级：行内样式(在元素标签里面直接写style)>内嵌样式(直接在<style></style>里面写的)>引入样式(<link>)
