@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax</title>
+</head>
+
+<script>
+/*
+window.XMLHttpRequest不为null,0,false就是支持XMLHttpRequest对象
+ActiveXObject为IE5和IE6
+xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+无法使用缓存文件、向服务器发送大量数据、发送包含未知字符的用户输入时，POST 比 GET 更稳定也更可靠
+一、创建一个XMLHttpRequest对象
+二、设置回调函数
+三、定义请求方法同步或者异步
+四、发送请求到服务器
+五、接收返回参数
+* */
+    function loadAjax () {
+
+        var xmlhttp;
+        xmlhttp = new XMLHttpRequest();
+        xmlHttp.onreadystatechange= callback;
+        xmlhttp.open("GET","/test/ajax",true);
+        xmlhttp.send();
+
+    }
+</script>
+<body>
+    <button type="button" onclick="loadAjax()" STYLE="text-align: center;color: red">点击测试AJAX</button>
+</body>
+</html>

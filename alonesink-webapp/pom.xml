@@ -13,21 +13,51 @@
 
     <!--定义jar保所依赖的版本-->
     <properties>
-        <spring.version>4.2.1.RELEASE</spring.version>
+        <spring.version>4.3.10.RELEASE</spring.version>
         <junit.version>4.12</junit.version>
     </properties>
 
 
     <dependencies>
 
-        <!--spring核心包开始-->
-        <!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
+        <!--spring begin!-->
+
+        <!-- spring核心包，所有模块均依赖此jar包 -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-core</artifactId>
             <version>${spring.version}</version>
         </dependency>
 
+        <!--spring bean用于创建对象的jar包-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <!--spring context-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <!--spring web-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <!--spring webmvc-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <!--spring end!-->
 
 
         <!-- https://mvnrepository.com/artifact/junit/junit -->
