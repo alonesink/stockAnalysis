@@ -8,9 +8,28 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>This is jsp page</title>
+    <title>这是登录页面</title>
 </head>
 <body>
-    <p>hello world!</p>
+
+    <form action="/test/mapping0" method="post">
+        <table>
+            <tr>
+                <label>用户名:</label>
+                <input type="text">
+            </tr>
+            <br>
+            <tr>
+                <label>密&nbsp;码:</label>
+                <input type="password" style="margin-left: 10px">
+            </tr>
+            <br>
+            <tr>
+                <td><input type="submit" value="登录"></td>
+                <td><input type="button" id="registerBtn" name="register" value="注册"></td>
+            </tr>
+        </table>
+    </form>
+
 </body>
 </html>

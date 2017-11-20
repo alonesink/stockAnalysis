@@ -1,8 +1,6 @@
-import com.alonesink.bean.Person;
-import com.alonesink.bean.TestPerson;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.alonesink.entity.User;
+import com.alonesink.service.UserService;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /*
@@ -11,19 +9,20 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 /*
 通过bean生成和通过注解生成实例对象
 * */
+
+
 public class TestIoc {
 
     public static void main(String[] args) {
 
-       /* String[] locations = {"conf/spring.xml"};
+        String[] locations = {"spring/spring.xml"};
 
         ApplicationContext ctx = new ClassPathXmlApplicationContext(locations);
-
-        Person p = (Person) ctx.getBean("person");
-        p.setName("zhangsan");
-        System.out.println(p.getName());*/
-
-
+        UserService userService = (UserService)ctx.getBean("testService");
+        User user = new User();
+        user.setUsername("zhangsan");
+        System.out.println(user.getUsername());
+        System.out.println(userService.doLogin(user));
     }
 
 }
