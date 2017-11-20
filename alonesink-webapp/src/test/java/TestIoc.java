@@ -1,5 +1,6 @@
 import com.alonesink.entity.User;
 import com.alonesink.service.UserService;
+import com.alonesink.service.impl.UserServiceImpl;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -18,11 +19,8 @@ public class TestIoc {
         String[] locations = {"spring/spring.xml"};
 
         ApplicationContext ctx = new ClassPathXmlApplicationContext(locations);
-        UserService userService = (UserService)ctx.getBean("testService");
+        UserServiceImpl userService = (UserServiceImpl)ctx.getBean("testService");
         User user = new User();
-        user.setUsername("zhangsan");
-        System.out.println(user.getUsername());
-        System.out.println(userService.doLogin(user));
     }
 
 }

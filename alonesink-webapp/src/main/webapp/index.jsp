@@ -16,12 +16,12 @@
         <table>
             <tr>
                 <label>用户名:</label>
-                <input type="text">
+                <input type="text" name="username">
             </tr>
             <br>
             <tr>
                 <label>密&nbsp;码:</label>
-                <input type="password" style="margin-left: 10px">
+                <input type="password" name="password" style="margin-left: 10px">
             </tr>
             <br>
             <tr>

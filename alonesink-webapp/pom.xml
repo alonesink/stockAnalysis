@@ -242,7 +242,7 @@
 
         </plugins>
 
-        <!--用于编译mapper文件-->
+        <!--用于编译java包中mapper.xml文件-->
         <resources>
             <resource>
                 <directory>src/main/java</directory>
