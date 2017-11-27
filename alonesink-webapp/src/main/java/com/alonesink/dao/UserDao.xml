@@ -14,4 +14,6 @@
         from user
         where username = #{username,jdbcType=VARCHAR}
     </select>
+
+    <insert id="insert"></insert>
 </mapper>

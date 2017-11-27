@@ -26,6 +26,8 @@
         <durid.version>1.1.5</durid.version>
         <slf4j.version>1.7.25</slf4j.version>
         <codeGenerator.version>1.3.5</codeGenerator.version>
+        <jedis.version>2.9.0</jedis.version>
+        <springRedis.version>2.0.1.RELEASE</springRedis.version>
     </properties>
 
     <dependencies>
@@ -177,6 +179,19 @@
             <scope>test</scope>
         </dependency>
 
+        <!--redis-->
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>${jedis.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-redis</artifactId>
+            <version>${springRedis.version}</version>
+        </dependency>
+
     </dependencies>
 
 
@@ -211,33 +226,6 @@
                     <target>1.8</target>
                     <encoding>utf-8</encoding>
                 </configuration>
-            </plugin>
-
-            <!-- 代码生成 -->
-            <plugin>
-                <groupId>org.mybatis.generator</groupId>
-                <artifactId>mybatis-generator-maven-plugin</artifactId>
-                <version>${codeGenerator.version}</version>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.mybatis.generator</groupId>
-                        <artifactId>mybatis-generator-core</artifactId>
-                        <version>${codeGenerator.version}</version>
-                    </dependency>
-                </dependencies>
-                <configuration>
-                    <configurationFile>src/main/resources/mybatis/generatorConfig.xml</configurationFile>
-                    <verbose>true</verbose>
-                    <overwrite>true</overwrite>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>Generate MyBatis Artifacts</id>
-                        <goals>
-                            <goal>generate</goal>
-                        </goals>
-                    </execution>
-                </executions>
             </plugin>
 
         </plugins>
